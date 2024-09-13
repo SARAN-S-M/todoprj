@@ -3,3 +3,5 @@
 .hintrc
 
 ./todoprj/__pycache__
+./todoprj/migrations/__pycache__
+./todoprj/__pycache__
