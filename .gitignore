@@ -1,3 +1,5 @@
 ./.hintrc
 ./hintrc
 .hintrc
+
+./todoprj/__pycache__
