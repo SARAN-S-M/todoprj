@@ -4,5 +4,7 @@ from . import views
 urlpatterns = [
     path('', views.home, name='home-page'),
     path('register/', views.register, name='register'),
-    path('login/', views.loginpage, name='login')
+    path('login/', views.loginpage, name='login'),
+    path('delete-task/<str:name>/', views.DeleterTask, name='delete'),
+    path('update-task/<str:name>/', views.UpdateTask, name='update')
 ]

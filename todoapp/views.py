@@ -10,8 +10,13 @@ def home(request):
         task = request.POST.get('task')
         new_todo = todo(user=request.user, todo_name=task)
         new_todo.save()
+
+    all_todos = todo.objects.filter(user=request.user)
+    context = {
+        'todos': all_todos
+    }
         
-    return render(request, 'todoapp/todo.html', {})
+    return render(request, 'todoapp/todo.html', context=context)
 
 def register(request):
     if request.method == 'POST':
@@ -50,3 +55,14 @@ def loginpage(request):
             return redirect('login')
         
     return render(request, 'todoapp/login.html', {})
+
+def DeleterTask(request, name):
+    get_todo = todo.objects.get(user = request.user, todo_name = name)
+    get_todo.delete()
+    return redirect('home-page')
+
+def UpdateTask(request, name):
+    get_todo = todo.objects.get(user = request.user, todo_name = name)
+    get_todo.status = True
+    get_todo.save()
+    return redirect('home-page')
