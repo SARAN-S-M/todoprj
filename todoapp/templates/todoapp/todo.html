@@ -26,6 +26,9 @@
                   <button type="submit" class="btn btn-primary">Add Task</button>
                 </div>
               </form>
+
+              <a href=""><button type="submit" style="background-color: firebrick; color: white;" class="btn btn-primary">Logout</button></a>
+
               <table class="table mb-4">
                 <thead>
                   <tr>
@@ -37,7 +40,11 @@
                 <tbody>
                   {% for i in todos %}
                   <tr>
+                    {% if i.status == True %}
+                      <td><s>{{i.todo_name}}</s></td>
+                    {% else %}
                     <td>{{i.todo_name}}</td>
+                    {% endif %}
 
                     {% if i.status == True %}
                       <td>Completed</td>
