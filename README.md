@@ -27,15 +27,20 @@ Ensure you have the following installed on your machine:
 
 ### Installation
 
-<div style="border:1px solid black; display:inline-block; padding:5px; border-radius:3px;">1. Clone the repository:</div>
+<div style="border:1px solid black; display:inline-block; padding:5px; border-radius:3px;">
+1. Clone the repository:</div>
 
 ```bash
 git clone https://github.com/your-username/todo-app.git
 cd todo-app
+```
 
-<div style="border:1px solid black; display:inline-block; padding:5px; border-radius:3px;">2. Create a virtual environment:</div>
+<div style="border:1px solid black; display:inline-block; padding:5px; border-radius:3px;">
+2. Create a virtual environment:</div>
 
+```bash
 python -m venv env
+```
 
 <div style="border:1px solid black; display:inline-block; padding:5px; border-radius:3px;">3. Activate the virtual environment:</div>
 
